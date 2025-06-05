@@ -1,0 +1,31 @@
+{
+	"schema": "1.0",
+	"type": "whmcs-servers",
+	"name": "botguard",
+	"license": "proprietary",
+	"category": "provisioning",
+	"description": {
+		"name": "BotGuard Bot Management",
+		"tagline": "BotGuard protects your website against malicious bots.",
+		"long": "BotGuard provides a service to protect your website against malicious bots, crawlers, scrapers, and hacker attacks. It selectively blocks bad bot traffic in real time, while granting unrestricted access to the website to human users, search engines, and affiliate bots.",
+		"features": [
+			"Server Load Reduction",
+			"SEO Improvement",
+			"Precise Web Analytics",
+			"Protection Against Hacking and Spam",
+			"Protection Against Content Scraping"
+		]
+	},
+	"logo": {
+		"filename": "logo.png"
+	},
+	"support": {
+		"homepage": "https:\/\/botguard.net\/",
+		"email": "support@botguard.net",
+		"docs_url": "https:\/\/botguard.net/en/docs"
+	},
+	"authors": [{
+		"name": "BotGuard",
+		"homepage": "https:\/\/botguard.net\/"
+	}]
+}
