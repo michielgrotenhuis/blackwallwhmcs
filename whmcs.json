@@ -4,28 +4,146 @@
 	"name": "botguard",
 	"license": "proprietary",
 	"category": "provisioning",
+	"version": "2.0.0",
+	"whmcs_version_compat": "8.0.0",
+	"php_version_compat": "7.4.0",
 	"description": {
 		"name": "BotGuard Bot Management",
-		"tagline": "BotGuard protects your website against malicious bots.",
-		"long": "BotGuard provides a service to protect your website against malicious bots, crawlers, scrapers, and hacker attacks. It selectively blocks bad bot traffic in real time, while granting unrestricted access to the website to human users, search engines, and affiliate bots.",
+		"tagline": "Advanced bot protection and traffic management for your websites.",
+		"long": "BotGuard provides a comprehensive service to protect your website against malicious bots, crawlers, scrapers, and hacker attacks. It intelligently blocks bad bot traffic in real time while granting unrestricted access to human users, search engines, and legitimate automated tools. Our advanced algorithms distinguish between good and bad bots, ensuring your website performance and security without affecting user experience.",
 		"features": [
-			"Server Load Reduction",
-			"SEO Improvement",
+			"Real-time Bot Detection & Blocking",
+			"Server Load Reduction up to 80%", 
+			"SEO Protection & Improvement",
 			"Precise Web Analytics",
-			"Protection Against Hacking and Spam",
-			"Protection Against Content Scraping"
+			"Advanced DDoS Protection",
+			"Content Scraping Prevention",
+			"Automated Challenge-Response System",
+			"Detailed Traffic Analytics",
+			"Custom Rule Management",
+			"API Integration & Monitoring"
 		]
 	},
 	"logo": {
 		"filename": "logo.png"
 	},
 	"support": {
-		"homepage": "https:\/\/botguard.net\/",
+		"homepage": "https://botguard.net/",
 		"email": "support@botguard.net",
-		"docs_url": "https:\/\/botguard.net/en/docs"
+		"docs_url": "https://botguard.net/en/docs",
+		"forum_url": "https://forum.botguard.net/",
+		"ticket_url": "https://support.botguard.net/"
 	},
-	"authors": [{
-		"name": "BotGuard",
-		"homepage": "https:\/\/botguard.net\/"
-	}]
+	"authors": [
+		{
+			"name": "BotGuard Team",
+			"homepage": "https://botguard.net/",
+			"email": "developers@botguard.net"
+		},
+		{
+			"name": "Dennis Prochko",
+			"email": "wolfsoft@mail.ru",
+			"role": "Original Developer"
+		}
+	],
+	"requirements": {
+		"php_extensions": [
+			"curl",
+			"json",
+			"mbstring"
+		],
+		"whmcs_modules": [],
+		"external_dependencies": [
+			"BotGuard API v2 Access"
+		]
+	},
+	"configuration": {
+		"server_module": true,
+		"requires_server": false,
+		"supports_sso": true,
+		"supports_usage_billing": false,
+		"supports_test_connection": true,
+		"default_ports": {
+			"non_ssl": 80,
+			"ssl": 443
+		}
+	},
+	"features": {
+		"provisioning": [
+			"create_account",
+			"suspend_account", 
+			"unsuspend_account",
+			"terminate_account"
+		],
+		"management": [
+			"client_area_output",
+			"admin_functions",
+			"service_single_sign_on"
+		],
+		"monitoring": [
+			"test_connection",
+			"usage_stats"
+		]
+	},
+	"templates": {
+		"client_area": [
+			"templates/overview.en.tpl",
+			"templates/overview.ru.tpl",
+			"templates/error.en.tpl", 
+			"templates/error.ru.tpl"
+		],
+		"supported_themes": [
+			"twenty-one",
+			"six",
+			"portal"
+		]
+	},
+	"api": {
+		"version": "2.0",
+		"base_url": "https://apiv2.botguard.net",
+		"authentication": "bearer_token",
+		"rate_limits": {
+			"requests_per_minute": 60,
+			"requests_per_hour": 1000
+		}
+	},
+	"changelog": {
+		"2.0.0": {
+			"date": "2025-06-05",
+			"changes": [
+				"Updated for WHMCS 8.13 compatibility",
+				"Added PHP 8.3 support",
+				"Improved error handling and logging",
+				"Enhanced client area templates with Bootstrap 4/5 support",
+				"Added service properties support",
+				"Implemented Single Sign-On functionality", 
+				"Added connection testing capabilities",
+				"Modernized API library with type declarations",
+				"Improved security and validation",
+				"Added comprehensive documentation"
+			]
+		},
+		"1.1.0": {
+			"date": "2020-06-01", 
+			"changes": [
+				"Initial WHMCS module release",
+				"Basic provisioning functionality",
+				"Client area integration",
+				"Multi-language support (English, Russian)"
+			]
+		}
+	},
+	"security": {
+		"data_encryption": true,
+		"secure_api_calls": true,
+		"input_validation": true,
+		"csrf_protection": true
+	},
+	"localization": {
+		"supported_languages": [
+			"en",
+			"ru"
+		],
+		"default_language": "en"
+	}
 }
