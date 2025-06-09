@@ -286,7 +286,7 @@ function botguard_TerminateAccount(array $params) {
 }
 
 /**
- * Test connection to the service.
+ * Test connection to the service (WHMCS standard function).
  * 
  * @param array $params Module parameters
  * @return array Connection test results
@@ -417,7 +417,7 @@ function botguard_ClientArea(array $params) {
  */
 function botguard_AdminCustomButtonArray() {
     return [
-        "Test Connection" => "testConnection",
+        "Test Connection" => "testConnectionAdmin",
         "Sync Status" => "syncStatus",
     ];
 }
@@ -428,7 +428,7 @@ function botguard_AdminCustomButtonArray() {
  * @param array $params Module parameters
  * @return string Result message
  */
-function botguard_testConnection(array $params) {
+function botguard_testConnectionAdmin(array $params) {
     try {
         if (empty($params['configoption1'])) {
             return 'API Key is required.';
